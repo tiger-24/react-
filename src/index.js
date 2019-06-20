@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {HashRouter as Router,Route,Redirect,Switch} from "react-router-dom";
+import {mainRouter} from "routers";
+ReactDOM.render(
+    <Router>
+        <Switch>
+            {/* 只有当路由匹配到admin的时候才会进入app组件  否则只能进404或者login页面
+                要做路由验证用render  应为只有render能做逻辑的判断
+                redirect 重定向   exact路劲完全匹配
+            */}
+            <Route path="/admin" render={()=>{
+                return <App />
+            }}/>
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+            {
+                mainRouter.map((item,index)=>(
+                    <Route key={index} path={item.pathname} component={item.component}/>
+                ))
+            }
+
+            <Redirect from="/" to="/admin" exact/>
+            <Redirect from="**" to={mainRouter[1].pathname}/>
+
+        </Switch>
+    </Router> ,
+    document.getElementById('root')
+);
