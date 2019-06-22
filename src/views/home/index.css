@@ -1,0 +1,15 @@
+.img{
+    position: relative;
+    background: #ccc;
+}
+.img>h1{
+    font-weight: 600;
+    color: blueviolet;
+    font-size: 18px;
+    position: absolute;
+    top: -24px;
+    left: -12px;
+}
+.img>img{
+    margin-left: 80px;
+}

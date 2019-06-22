@@ -15,6 +15,10 @@
     Redux-thunk
     prop-types
     css_modules
+    qs
+    http-proxy-middleware 
+    xlsx
 
+npm install react-router-dom redux redux-thunk antd immutable whatwg-fetch prop-types react-loadable qs xlsx -S
 
-cnpm install react-router-dom redux redux-thunk antd immutable whatwg-fetch prop-types react-loadable -S
+npm install http-proxy-middleware -D

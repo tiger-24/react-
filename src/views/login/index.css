@@ -1,0 +1,29 @@
+.login_container{
+    width: 400px;
+    height: 360px;
+    background: #001529;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.login_container>.logo{
+    width: 380px;
+    height: 73px;
+}
+
+.login_container>.logo>img{
+    width: 100%;
+
+}
+.ant-form-item-label>label{
+    color: #fff;
+}
+
+.login-form-button{
+    width: 100%;
+}

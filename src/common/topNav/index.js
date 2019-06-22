@@ -12,7 +12,7 @@ class topNav extends React.Component{
                 <Row>
                     <Col span={6}>
                         <div className="logo">
-                            <img src={logo}/>
+                            <img src={logo} alt="logo"/>
                         </div>
                     </Col>
                     <Col span={15}>

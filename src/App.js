@@ -6,6 +6,7 @@ class App extends React.Component{
   render(){
     return (
       <Switch>
+        <Redirect from="/admin" to="/admin/home" exact/>
         <LayoutCom>
         {
           pageRouter.map((item,index)=>(
@@ -15,7 +16,6 @@ class App extends React.Component{
           ))
         }
         </LayoutCom>
-        <Redirect from="/admin" to="/admin/home" exact/>
         <Redirect from="**" to="/404"/>
       </Switch>
     )

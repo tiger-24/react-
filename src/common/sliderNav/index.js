@@ -5,9 +5,11 @@ import {withRouter} from "react-router-dom"
 
 const { SubMenu }  = Menu;
 class SliderNav extends React.Component{
+
     handleTo({key}){
-       this.props.history.push(key);
+       this.props.history.push(key);  
     }
+
     render(){
         return (
             <Menu
@@ -26,8 +28,8 @@ class SliderNav extends React.Component{
                                         <Icon type={item.icon} />
                                         {item.title}
                                     </span>
-                            }
-                        >
+                                }
+                            >
                                 {
                                     item.children.map((children)=>(
                                         <Menu.Item key={children.pathname}>{children.title}</Menu.Item>
@@ -36,11 +38,6 @@ class SliderNav extends React.Component{
                         </SubMenu>:<Menu.Item  key={item.pathname}><Icon type={item.icon} />{item.title}</Menu.Item>
                     ))
                 }
-
-
-
-
-
             </Menu>
         )
     }

@@ -28,10 +28,16 @@ const Users = Loadable({
     loading: Loading,
 });
 
+const Editor = Loadable({
+    loader:() => import("./editor"),
+    loading:Loading,
+})
+
 export {
     Home,
     Login,
     NotFound,
     Settings,
     Users,
+    Editor,
 }

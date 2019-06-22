@@ -7,6 +7,7 @@ import {
     NotFound,
     Settings,
     Users,
+    Editor,
 } from "views"
 
 //基础路由
@@ -37,15 +38,15 @@ export const pageRouter = [
         children:[
             {
                 title:"合同选项",
-                pathname:"admin/seetings1"
+                pathname:"/admin/settings",
             },
             {
                 title:"经纪人选项",
-                pathname:"admin/seetings2"
+                pathname:"/admin/Editor",
             },
             {
                 title:"球员选项",
-                pathname:"admin/seetings3"
+                pathname:"/admin/seetings3"
             }
         ]
     },
@@ -57,15 +58,15 @@ export const pageRouter = [
         children:[
             {
                 title:"常规赛",
-                pathname:"admin/users1"
+                pathname:"/admin/users"
             },
             {
                 title:"季后赛",
-                pathname:"admin/users2"
+                pathname:"/admin/users2"
             },
             {
                 title:"总决赛",
-                pathname:"admin/users3"
+                pathname:"/admin/users3"
             }
         ]
     },
